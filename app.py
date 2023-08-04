@@ -37,7 +37,7 @@ def predict():
     prediction = model.predict(padded)
 
     # Return the predicted label as a JSON response
-    label = 'clickbait' if prediction[0][0] > 0.5 else 'not clickbait'
+    label = 'Clickbait' if prediction[0][0] > 0.5 else 'Not Clickbait'
     return jsonify({'label': label})
 
 if __name__ == '__main__':
